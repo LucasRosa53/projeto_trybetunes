@@ -7,3 +7,4 @@ class App extends React.Component {
 }
 
 export default App;
+// começando o projeto vamo q vamo
