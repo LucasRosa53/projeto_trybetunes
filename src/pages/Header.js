@@ -24,10 +24,10 @@ class Header extends Component {
     return (
       <header data-testid="header-component">
         <nav>
-          <Link to="/search">Procurar</Link>
+          <Link data-testid="link-to-search" to="/search">Procurar</Link>
           <Link to="/album/:id">Album</Link>
-          <Link to="/favorites">Favoritos</Link>
-          <Link to="/profile">Perfil</Link>
+          <Link data-testid="link-to-favorites" to="/favorites">Favoritos</Link>
+          <Link data-testid="link-to-profile" to="/profile">Perfil</Link>
           <Link to="/profile/edit">Edição de Perfil</Link>
         </nav>
         <section data-testid="header-user-name">
