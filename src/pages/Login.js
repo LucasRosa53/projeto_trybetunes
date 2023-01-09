@@ -38,8 +38,8 @@ class Login extends Component {
   render() {
     const { buttonSubmitDisabled, name, loading } = this.state;
     return (
-      <form>
-        <div data-testid="page-login">
+      <div data-testid="page-login">
+        <form>
           <input
             data-testid="login-name-input"
             type="text"
@@ -57,9 +57,9 @@ class Login extends Component {
 
           </button>
           { loading && <Carregando /> }
-        </div>
 
-      </form>
+        </form>
+      </div>
     );
   }
 }
