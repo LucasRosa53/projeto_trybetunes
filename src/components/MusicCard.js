@@ -8,7 +8,7 @@ class MusicCard extends Component {
   };
 
   funcSong = async () => {
-    const { musica } = this.props;
+    const { musica } = this.props; /* validacao */
     this.setState({ loading: true });
     await addSong(musica);
     this.setState({ loading: false });
@@ -48,3 +48,10 @@ class MusicCard extends Component {
   }
 }
 export default MusicCard;
+
+MusicCard.propTypes = {
+  musica: PropTypes.number.isRequired,
+  previewUrl: PropTypes.string.isRequired,
+  trackId: PropTypes.string.isRequired,
+  trackName: PropTypes.string.isRequired,
+};

@@ -44,3 +44,9 @@ class Album extends Component {
   }
 }
 export default Album;
+
+Album.propTypes = {
+  match: PropTypes.string.isRequired,
+  params: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+};
