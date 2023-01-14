@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
 
