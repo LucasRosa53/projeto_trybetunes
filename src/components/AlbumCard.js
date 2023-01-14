@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 class AlbumCard extends Component {
   render() {
     const { collectionName, collectionId } = this.props;
-    console.log(this.props);
     return (
       <li>
         <Link
@@ -23,5 +22,5 @@ export default AlbumCard;
 
 AlbumCard.propTypes = {
   collectionName: PropTypes.string.isRequired,
-  collectionId: PropTypes.string.isRequired,
+  collectionId: PropTypes.number.isRequired,
 };
