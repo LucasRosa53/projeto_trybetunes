@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Carregando from '../pages/Carregando';
 import { addSong } from '../services/favoriteSongsAPI';
 
@@ -50,8 +51,7 @@ class MusicCard extends Component {
 export default MusicCard;
 
 MusicCard.propTypes = {
-  musica: PropTypes.number.isRequired,
-  previewUrl: PropTypes.string.isRequired,
-  trackId: PropTypes.string.isRequired,
-  trackName: PropTypes.string.isRequired,
+musica: PropTypes.number.isRequired,
+previewUrl: PropTypes.string.isRequired,
+trackName: PropTypes.string.isRequired,
 };

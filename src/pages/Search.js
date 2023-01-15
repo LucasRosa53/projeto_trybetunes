@@ -39,52 +39,45 @@ class Search extends Component {
   render() {
     const { buttonSubmitDisabled, name, loading, albums, artista } = this.state;
     return (
-      <div data-testid="page-search">
+      <><div data-testid="page-search">
         <form>
-          <div>
-            <input
-              data-testid="search-artist-input"
-              type="text"
-              name="name"
-              value={ name }
-              onChange={ this.funcTarget }
-            />
-          </div>
-          <div>
-            <button
-              type="submit"
-              data-testid="search-artist-button"
-              disabled={ buttonSubmitDisabled }
-              onClick={ this.funcApi }
-            >
-              Pesquisar
-            </button>
-          </div>
+
+          <input
+            data-testid="search-artist-input"
+            type="text"
+            name="name"
+            value={name}
+            onChange={this.funcTarget} />
+
+
+          <button
+            type="submit"
+            data-testid="search-artist-button"
+            disabled={buttonSubmitDisabled}
+            onClick={this.funcApi}
+          >
+            Pesquisar
+          </button>
         </form>
-        <main>
-          { artista && (
+      </div><main>
+          {artista && (
             <p>
               Resultado de álbuns de:
               {' '}
-              { artista }
+              {artista}
               {' '}
-            </p>) }
-          { loading ? <Carregando /> : (
+            </p>)}
+          {loading ? <Carregando /> : (
             <ul>
-              {
-                albums.length === 0 && artista
-                  ? (<p>`Nenhum álbum foi encontrado`</p>) : (
-                    albums.map((album) => (<AlbumCard
-                      { ...album }
-                      key={ album.collectionId }
-                    />))
-                  )
-
-              }
+              {albums.length === 0 && artista
+                ? (<p>`Nenhum álbum foi encontrado`</p>) : (
+                  albums.map((album) => (<AlbumCard
+                    {...album}
+                    key={album.collectionId} />))
+                )}
             </ul>
           )}
-        </main>
-      </div>
+        </main></>
     );
   }
 }
