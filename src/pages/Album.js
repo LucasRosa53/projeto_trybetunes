@@ -13,7 +13,6 @@ class Album extends Component {
     const { match: { params: { id } } } = this.props;
     const musicas = await getMusics(id);
     this.setState({ albumInfo: musicas[0] });
-    console.log(musicas);
     const somenteMusicas = [...musicas.slice(1)];
     this.setState({ musicList: somenteMusicas });
   }
@@ -48,7 +47,7 @@ class Album extends Component {
 export default Album;
 
 Album.propTypes = {
-match: PropTypes.string.isRequired,
-params: PropTypes.string.isRequired,
-id: PropTypes.string.isRequired,
+  match: PropTypes.string.isRequired,
+  params: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };

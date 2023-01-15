@@ -39,27 +39,29 @@ class Search extends Component {
   render() {
     const { buttonSubmitDisabled, name, loading, albums, artista } = this.state;
     return (
-      <><div data-testid="page-search">
-        <form>
+      <>
+        <div data-testid="page-search">
+          <form>
 
-          <input
-            data-testid="search-artist-input"
-            type="text"
-            name="name"
-            value={name}
-            onChange={this.funcTarget} />
+            <input
+              data-testid="search-artist-input"
+              type="text"
+              name="name"
+              value={ name }
+              onChange={ this.funcTarget }
+            />
 
-
-          <button
-            type="submit"
-            data-testid="search-artist-button"
-            disabled={buttonSubmitDisabled}
-            onClick={this.funcApi}
-          >
-            Pesquisar
-          </button>
-        </form>
-      </div><main>
+            <button
+              type="submit"
+              data-testid="search-artist-button"
+              disabled={ buttonSubmitDisabled }
+              onClick={ this.funcApi }
+            >
+              Pesquisar
+            </button>
+          </form>
+        </div>
+        <main>
           {artista && (
             <p>
               Resultado de álbuns de:
@@ -72,12 +74,14 @@ class Search extends Component {
               {albums.length === 0 && artista
                 ? (<p>`Nenhum álbum foi encontrado`</p>) : (
                   albums.map((album) => (<AlbumCard
-                    {...album}
-                    key={album.collectionId} />))
+                    { ...album }
+                    key={ album.collectionId }
+                  />))
                 )}
             </ul>
           )}
-        </main></>
+        </main>
+      </>
     );
   }
 }
